@@ -5,6 +5,7 @@
 
 [Download From Play Store](https://play.google.com/store/apps/details?id=devesh.medic.dose)
 
+[Official Website](https://deveshrx.com)
 
 
 Medic Dose Calculator is a app to Measure proper paediatric dose of medicine according to adult dose of that medicine.
@@ -18,8 +19,7 @@ Exact dose of any given medicine produces the desired therapeutic effect which v
 * Easy-to-use for any person who don't have knowledge of medicine/dosage.
 * View Full Maths Calculations & Formula 
 
-
-![https://play.google.com/store/apps/details?id=devesh.medic.dose](docs/img/google_play_badge.png)
+[<img src="docs/img/google_play_badge.png">](https://play.google.com/store/apps/details?id=devesh.medic.dose)
 
 
 ### Screenshots
