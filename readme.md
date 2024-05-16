@@ -22,3 +22,9 @@ Exact dose of any given medicine produces the desired therapeutic effect which v
 ![https://play.google.com/store/apps/details?id=devesh.medic.dose](https://ik.imagekit.io/mkg3bafgvs3/DeveshRx/deveshrx_com/google_play_badge.png)
 
 
+### Screenshots
+
+![A Paediatric dose calculator](docs/img/screenshotsss1.png)
+![A Paediatric dose calculator](docs/img/screenshotsss2.png)
+![A Paediatric dose calculator](docs/img/screenshotsss3.png)
+![A Paediatric dose calculator](docs/img/screenshotsss4.png)
