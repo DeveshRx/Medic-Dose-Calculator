@@ -19,7 +19,7 @@ Exact dose of any given medicine produces the desired therapeutic effect which v
 * View Full Maths Calculations & Formula 
 
 
-![https://play.google.com/store/apps/details?id=devesh.medic.dose](https://ik.imagekit.io/mkg3bafgvs3/DeveshRx/deveshrx_com/google_play_badge.png)
+![https://play.google.com/store/apps/details?id=devesh.medic.dose](docs/img/google_play_badge.png)
 
 
 ### Screenshots
