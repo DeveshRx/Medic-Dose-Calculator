@@ -4,6 +4,7 @@
 ## A Paediatric dose calculator for Doctors & Pharmacist
 
 [Download From Play Store](https://play.google.com/store/apps/details?id=devesh.medic.dose)
+[Get Ad-Free App Version](https://play.google.com/store/apps/details?id=devesh.medic.plus)
 
 [Official Website](https://deveshrx.com)
 
