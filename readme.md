@@ -12,7 +12,7 @@ App is specially made for Doctors & pharmacist.
 
 Exact dose of any given medicine produces the desired therapeutic effect which varies from person to person. Children do not react to all medicines in same way as the adults and with few exceptions, medicines are more active and more toxic to children than adults if dosage of  medicine is not accurate. To solve this problem accurate dosage is calculated by various pharmaceutical formulas.
 
-Features:
+### Features:
 * Can calculate accurate paediatric dose from Age & Weight of child
 * Various Pharmaceutical formulas are used: Young's formula, Dilling's formula, Cowling's formula, Fried's formula(for infants), Bastedo's formula.
 * Easy-to-use for any person who don't have knowledge of medicine/dosage.
