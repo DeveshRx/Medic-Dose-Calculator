@@ -7,6 +7,7 @@
 [<img src="https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white">](https://play.google.com/store/apps/details?id=devesh.medic.dose)
 
 
+[Download .APK for Android ](https://github.com/DeveshRx/Medic-Dose-Calculator/releases/latest/download/app-free-release.apk)
 
 [Download From Play Store](https://play.google.com/store/apps/details?id=devesh.medic.dose)
 
@@ -31,6 +32,8 @@ Exact dose of any given medicine produces the desired therapeutic effect which v
 [<img src="docs/img/google_play_badge.png">](https://play.google.com/store/apps/details?id=devesh.medic.dose)
 
 ## Download & Install Options
+
+[Download .APK for Android ](https://github.com/DeveshRx/Medic-Dose-Calculator/releases/latest/download/app-free-release.apk)
 
 [Download From Play Store](https://play.google.com/store/apps/details?id=devesh.medic.dose)
 
