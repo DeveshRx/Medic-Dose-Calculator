@@ -3,32 +3,13 @@
   <component name="AppInsightsSettings">
     <option name="tabSettings">
       <map>
-        <entry key="Android Vitals">
-          <value>
-            <InsightsFilterSettings>
-              <option name="connection">
-                <ConnectionSetting>
-                  <option name="appId" value="devesh.app.music" />
-                </ConnectionSetting>
-              </option>
-              <option name="failureTypes">
-                <list>
-                  <option value="FATAL" />
-                </list>
-              </option>
-              <option name="signal" value="SIGNAL_UNSPECIFIED" />
-              <option name="timeIntervalDays" value="SEVEN_DAYS" />
-              <option name="visibilityType" value="ALL" />
-            </InsightsFilterSettings>
-          </value>
-        </entry>
         <entry key="Firebase Crashlytics">
           <value>
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="devesh.medic.dose" />
-                  <option name="mobileSdkAppId" value="1:868741407839:android:c186e166b9cfbdfd" />
+                  <option name="appId" value="devesh.medic.dose.debug" />
+                  <option name="mobileSdkAppId" value="1:868741407839:android:4c46e1004c1a294b6067ea" />
                   <option name="projectId" value="admob-app-id-7252308654" />
                   <option name="projectNumber" value="868741407839" />
                 </ConnectionSetting>

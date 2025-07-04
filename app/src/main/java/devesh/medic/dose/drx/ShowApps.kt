@@ -1,4 +1,4 @@
-package deveshrx.apps
+package devesh.medic.dose.drx
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -26,7 +25,8 @@ import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat.startActivity
 import coil.compose.AsyncImage
 import com.google.gson.Gson
-import deveshrx.apps.ui.theme.MedicDoseCalculatorTheme
+import devesh.medic.dose.ui.theme.MedicDoseCalculatorTheme
+
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
@@ -77,7 +77,7 @@ al.shuffle()
                         Intent.ACTION_VIEW,
                         Uri.parse(url)
                     )
-                    startActivity(mContext,urlIntent,null)
+                    mContext.startActivity(urlIntent,null)
                 }) {
                     Column(
                         modifier = Modifier

@@ -1,14 +1,16 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.compose.compiler)
+
 }
 
 android {
     namespace = "deveshrx.apps"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
-        minSdk = 24
+    //    minSdk = 24
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -36,9 +38,10 @@ android {
     buildFeatures {
         compose = true
     }
-    composeOptions {
+   /* composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
     }
+    */
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -46,6 +49,12 @@ android {
     }
 }
 
+composeCompiler {
+    reportsDestination = layout.buildDirectory.dir("compose_compiler")
+    stabilityConfigurationFile = rootProject.layout.projectDirectory.file("stability_config.conf")
+    enableStrongSkippingMode = true
+
+}
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -69,7 +78,6 @@ dependencies {
     implementation(libs.androidx.material3)
     testImplementation(libs.junit)
 
-    implementation("androidx.compose.material3:material3:1.2.1")
 
 
 
@@ -82,11 +90,11 @@ dependencies {
     api(libs.androidx.ui.tooling.preview)
     api(libs.androidx.material3)
 
-    api("com.squareup.okhttp3:okhttp:4.12.0")
+    api(libs.okhttp)
     //api(platform("com.squareup.okhttp3:okhttp-bom:4.12.0"))
 
-    api("com.google.code.gson:gson:2.10.1")
-    api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
+    api(libs.gson)
+    api(libs.kotlinx.serialization.json)
 
-    implementation("io.coil-kt:coil-compose:2.6.0")
+    implementation(libs.coil.compose)
 }

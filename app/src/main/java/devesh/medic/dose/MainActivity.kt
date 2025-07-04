@@ -69,10 +69,10 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-if(getString(R.string.app_flavour).equals("free")){
-    MobileAds.initialize(this)
+        if (getString(R.string.app_flavour).equals("free")) {
+            MobileAds.initialize(this)
 
-}
+        }
 
         setContent {
             MedicDoseCalculatorTheme {
@@ -115,7 +115,7 @@ if(getString(R.string.app_flavour).equals("free")){
                     TopAppBar(
                         modifier = Modifier.shadow(
                             elevation = 5.dp,
-                     //       spotColor = Color.DarkGray,
+                            //       spotColor = Color.DarkGray,
                         ),
 
                         colors = topAppBarColors(
@@ -127,15 +127,20 @@ if(getString(R.string.app_flavour).equals("free")){
                             Text("Medic Dose Calculator")
                         },
                         actions = {
-                           /* IconButton(onClick = { /* do something */ }) {
-                                Icon(
-                                    painter = painterResource(id = R.drawable.ic_android_black_24dp),
-                                    contentDescription = "Localized description"
-                                )
-                            }*/
+                            /* IconButton(onClick = { /* do something */ }) {
+                                 Icon(
+                                     painter = painterResource(id = R.drawable.ic_android_black_24dp),
+                                     contentDescription = "Localized description"
+                                 )
+                             }*/
                             IconButton(onClick = {
 
-                                startActivity(Intent(this@MainActivity,SettingsActivity::class.java))
+                                startActivity(
+                                    Intent(
+                                        this@MainActivity,
+                                        SettingsActivity::class.java
+                                    )
+                                )
                             }) {
                                 Icon(
                                     imageVector = Icons.Rounded.Settings,
@@ -244,8 +249,8 @@ if(getString(R.string.app_flavour).equals("free")){
                                 onReset = {
                                     adultDose.value = ""
                                     ageInput.value = ""
-                                    finalResult.value=""
-                                    weightInput.value=""
+                                    finalResult.value = ""
+                                    weightInput.value = ""
                                 },
                                 finalResult = finalResult
                             )
@@ -256,7 +261,7 @@ if(getString(R.string.app_flavour).equals("free")){
                                 weightInput = weightInput,
                                 onFormulaChange = {
                                     Log.d(TAG, "onFormulaChange: " + it.toString())
-                                    weightFormulaSelected=it
+                                    weightFormulaSelected = it
                                 },
                                 onCalculateButtonClick = {
                                     WeightCalculation()
@@ -265,8 +270,8 @@ if(getString(R.string.app_flavour).equals("free")){
 
                                     adultDose.value = ""
                                     ageInput.value = ""
-                                    finalResult.value=""
-                                    weightInput.value=""
+                                    finalResult.value = ""
+                                    weightInput.value = ""
 
                                 },
                                 finalResult = finalResult
@@ -285,7 +290,7 @@ if(getString(R.string.app_flavour).equals("free")){
 
                     Spacer(modifier = Modifier.height(20.dp))
 
-                    if(!LocalInspectionMode.current){
+                    if (!LocalInspectionMode.current) {
                         AdMobBannerMediumRec()
                     }
 
@@ -342,12 +347,14 @@ if(getString(R.string.app_flavour).equals("free")){
 
     }
 
-    fun WeightCalculation(){
+    fun WeightCalculation() {
 
         var d = 0.00000
         if (weightFormulaSelected?.id.equals("wcfkg")) {
-            d = ClarkFormulaKg(weight = weightInput.value.toDouble(),
-                adultDose = adultDose.value.toDouble())
+            d = ClarkFormulaKg(
+                weight = weightInput.value.toDouble(),
+                adultDose = adultDose.value.toDouble()
+            )
         } else if (weightFormulaSelected?.id.equals("wcfp")) {
             d = ClarkFormulaPound(
                 weight = weightInput.value.toDouble(),
@@ -360,10 +367,11 @@ if(getString(R.string.app_flavour).equals("free")){
                 adultDose = adultDose.value.toDouble()
             )
 
-        }
-        else {
-            d = ClarkFormulaKg(weight = weightInput.value.toDouble(),
-                adultDose = adultDose.value.toDouble())
+        } else {
+            d = ClarkFormulaKg(
+                weight = weightInput.value.toDouble(),
+                adultDose = adultDose.value.toDouble()
+            )
 
             Log.d(TAG, "WeightCalculation: weightFormulaSelected  " + weightFormulaSelected?.id)
 
@@ -372,7 +380,6 @@ if(getString(R.string.app_flavour).equals("free")){
         finalResult.value = d.toString()
 
     }
-
 
 
 }

@@ -1,4 +1,3 @@
-import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
 import java.io.FileInputStream
 import java.util.Properties
 
@@ -6,10 +5,13 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.googleGmsGoogleServices)
+
+    alias(libs.plugins.compose.compiler)
+
 }
 
-val app_version= "2.0.0"
-val app_version_code=16
+val app_version= "2.0.0.1"
+val app_version_code=17
 
 // Create a variable called keystorePropertiesFile, and initialize it to your
 // keystore.properties file, in the rootProject folder.
@@ -46,12 +48,13 @@ android {
         }
     }
     namespace = "devesh.medic.dose"
-    compileSdk = 34
+   // compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "devesh.medic.dose"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 36
         versionCode = app_version_code
         versionName = app_version
 
@@ -59,6 +62,8 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+
     }
 
     buildTypes {
@@ -111,14 +116,19 @@ android {
     buildFeatures {
         compose = true
     }
-    composeOptions {
+
+    /* composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
     }
+    */
+
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+
     flavorDimensions += listOf("appstore")
     productFlavors {
         create("free") {
@@ -137,10 +147,20 @@ android {
         }
 
     }
+
+}
+
+
+composeCompiler {
+  //  reportsDestination = layout.buildDirectory.dir("compose_compiler")
+  //  stabilityConfigurationFile = rootProject.layout.projectDirectory.file("stability_config.conf")
+
+    enableStrongSkippingMode = true
+
 }
 
 dependencies {
-    implementation(project(":deveshrx_apps"))
+    // implementation(project(":deveshrx_apps"))
 
     implementation(platform(libs.androidx.compose.bom))
 
@@ -149,7 +169,6 @@ dependencies {
     implementation(libs.firebase.analytics)
     implementation(libs.play.services.ads)
   //  implementation(libs.play.services.ads.lite)
-    val nav_version = "2.7.7"
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -166,17 +185,18 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    implementation("androidx.navigation:navigation-compose:$nav_version")
-    implementation("androidx.compose.material3:material3:1.2.1")
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.material3)
 
 
 
 
-    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation(libs.okhttp)
     //api(platform("com.squareup.okhttp3:okhttp-bom:4.12.0"))
 
-    implementation("com.google.code.gson:gson:2.10.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
+    implementation(libs.gson)
+    implementation(libs.kotlinx.serialization.json)
 
+    implementation(libs.coil.compose)
 
 }

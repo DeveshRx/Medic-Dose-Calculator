@@ -43,9 +43,9 @@ import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import devesh.medic.dose.ui.theme.MedicDoseCalculatorTheme
-import deveshrx.apps.AppItem
-import deveshrx.apps.DeveshRxAppsList
-import deveshrx.apps.TAG
+import devesh.medic.dose.drx.AppItem
+import devesh.medic.dose.drx.DeveshRxAppsList
+import devesh.medic.dose.drx.TAG
 
 class SettingsActivity : ComponentActivity() {
 

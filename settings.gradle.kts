@@ -23,4 +23,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Medic Dose Calculator"
 include(":app")
-include(":deveshrx_apps")
+// include(":deveshrx_apps")

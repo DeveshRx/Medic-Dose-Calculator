@@ -1,4 +1,4 @@
-package deveshrx.apps
+package devesh.medic.dose.drx
 
 import kotlinx.serialization.Serializable
 
