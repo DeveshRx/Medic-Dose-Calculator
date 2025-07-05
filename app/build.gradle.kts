@@ -11,7 +11,7 @@ plugins {
 }
 
 val app_version= "2.0.0.1"
-val app_version_code=17
+val app_version_code=18
 
 // Create a variable called keystorePropertiesFile, and initialize it to your
 // keystore.properties file, in the rootProject folder.

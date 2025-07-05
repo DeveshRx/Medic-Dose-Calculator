@@ -253,11 +253,11 @@ class SettingsActivity : ComponentActivity() {
                             startActivity(urlIntent)
                         })
 
-
-Spacer(modifier = Modifier.height(10.dp))
-
-                    DeveshRxAppsList()
-HorizontalDivider(modifier = Modifier.padding(top = 5.dp))
+//
+//Spacer(modifier = Modifier.height(10.dp))
+//
+//                    DeveshRxAppsList()
+//HorizontalDivider(modifier = Modifier.padding(top = 5.dp))
 
                     if(!LocalInspectionMode.current){
 
